@@ -1,5 +1,5 @@
 ## Read household power data
-readData <- read.table('household_power_consumption.txt', header=T, sep=';', 
+readData <- read.table('household_power_consumption.txt', header=TRUE, sep=';', 
 na.strings='?', quote='\"')
 
 readData$Date <- as.Date(readData$Date, format='%d/%m/%Y')

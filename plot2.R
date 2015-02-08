@@ -1,5 +1,5 @@
 ## Read power consmption data
-readData <- read.table('household_power_consumption.txt', header=T, sep=';', na.strings='?', quote='\"')
+readData <- read.table('household_power_consumption.txt', header=TRUE, sep=';', na.strings='?', quote='\"')
 
 readData$Date <- as.Date(readData$Date, format='%d/%m/%Y')
 ## Subset data and convert dates to datetime
