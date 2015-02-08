@@ -16,13 +16,13 @@ par(mfrow=c(2,2), mai=c(0.1, 0.1, 0.1), mar=c(0,0,0,0), oma=c(0,0,0,0), pin=c(2,
 
 with(subsetData, {
   plot(Global_active_power~Datetime, type='l', 
-       ylab='Global Active Power', xlab='')
+       ylab='Global Active Power', xlab='', cex.axis=.6)
   
   plot(Voltage~Datetime, type='l', 
-       ylab='Voltage', xlab='datetime')
+       ylab='Voltage', xlab='datetime', cex.axis=.6)
   
   plot(Sub_metering_1~Datetime, type='l', 
-       ylab='Global Active Power', xlab='')
+       ylab='Global Active Power', xlab='', cex.axis=.6)
   
   lines(Sub_metering_2~Datetime,col='Red')
   
@@ -32,7 +32,7 @@ with(subsetData, {
          legend=c('Sub_metering_1', 'Sub_metering_2', 'Sub_metering_3'), cex=0.6)
   
   plot(Global_reactive_power~Datetime, type='l', 
-       ylab='Global_reactive_power',xlab='datetime')
+       ylab='Global_reactive_power',xlab='datetime', cex.axis=.6)
 })
 
 dev.copy(png, file='plot4.png', height=480, width=480)
